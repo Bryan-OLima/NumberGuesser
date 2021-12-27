@@ -1,19 +1,26 @@
 :root {
---font: Arial, Helvetica, 'Sans-Serif';
 --cor-font: white;
 --peso: ligther;
+--font1: 'Open Sans', Helvetica, sans-serif;
+--font2: 'David Libre', sans-serif;
+--pri-cor: #29417C ;
+--seg-cor: #DFECF4;
+--btn-cor: #48CAFD;
+--blk-cor: #030304;
+--shadow-cor: #78aac2;
+
 }
 
 * {
-    font-family: var(--font);
-    color: var(--cor-font);
+    font-family: var(--font1);
+    color: var(--blk-cor);
     font-weight: var(--peso);
 }
 
 body {
     margin: auto;
     background-size: cover;
-    background-image: linear-gradient(to top, #111, #4e4e4e);
+    background-image: linear-gradient(315deg, var(--pri-cor), #78aac2);
     width: 100%;
     height: 100vh;
     min-width: 500px ;
@@ -30,7 +37,7 @@ body {
             justify-content: center;
             align-items: stretch;
             text-align: center;
-            background-image: linear-gradient(to top, #111, #4e4e4e );
+            background-color: var(--seg-cor);
             border-radius: 5px;
             width: 420px;
             height: 320px;
@@ -45,7 +52,7 @@ body {
                 
             h1 {
                 text-align: center;
-                color: #111;
+                color: var(--seg-cor);
                 font-size: 2.2em;
                 font-weight: bold;
             }
@@ -74,9 +81,24 @@ body {
                     transition: 0.3s;
                 }
 
-                    #sim:hover, #ini:hover {
+                    #sim {
+                        background-image: linear-gradient(to bottom, rgb(33, 187, 33), rgb(32, 204, 32)) ;
+                    }
+
+                    #sim:hover {
                         transition: 0.5s;
-                        background-image: linear-gradient(to bottom, rgb(0, 102, 0), rgb(3, 126, 3)) ;
+                        background-image: linear-gradient(to bottom, rgb(38, 214, 38), rgb(35, 221, 35)) ;
+                        box-shadow: 1px 1px 3px 1px var(--shadow-cor);
+                    }
+
+                   #ini {
+                       background-color: var(--btn-cor);
+                   }
+
+                    #ini:hover {
+                        background-image: linear-gradient(to bottom, #7bd8fd, var(--btn-cor), #7bd8fd);
+                        box-shadow: 1px 1px 3px 1px var(--shadow-cor);
+                        transition: 0.3s;
                     }
 
                 #refresh {
@@ -88,10 +110,13 @@ body {
                     }
 
                 #nao {
-                    background-color: rgb(126, 3, 3);
+                    transition: 0.5s;
+                    background-image: linear-gradient(to bottom, rgb(126, 58, 58), rgb(129, 73, 73)) ;
 
                 }
 
                     #nao:hover {
-                        background-image: linear-gradient(to bottom, rgb(126, 3, 3), rgb(145, 4, 4) );
+                        background-image: linear-gradient(to bottom, rgb(167, 103, 103), rgb(155, 104, 104));
+                        box-shadow: 1px 1px 3px 1px var(--shadow-cor);
+                        transition: 0.3s;
                     }
